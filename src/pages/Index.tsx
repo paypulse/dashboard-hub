@@ -1,12 +1,24 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from "@/components/dashboard/Header";
+import ProjectOverview from "@/components/dashboard/ProjectOverview";
+import FeatureCards from "@/components/dashboard/FeatureCards";
+import ArchitectureFlow from "@/components/dashboard/ArchitectureFlow";
+import DatasetGuide from "@/components/dashboard/DatasetGuide";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      <main className="container max-w-6xl mx-auto px-4 py-10">
+        <ProjectOverview />
+        <FeatureCards />
+        <ArchitectureFlow />
+        <DatasetGuide />
+        
+        <footer className="text-center text-muted-foreground text-sm py-6 border-t border-border mt-10">
+          AI 튜터 시스템 개발 가이드 © 2024
+        </footer>
+      </main>
     </div>
   );
 };
